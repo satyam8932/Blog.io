@@ -1,0 +1,65 @@
+{%extends 'base.html'%} {%block title%}Blog.io{%endblock%} {%block content%}
+{%load static %}
+
+<div class="containerPost">
+  <div class="row">
+    <div class="col s12 l12">
+      <h1 class="contentHeadings" style="margin-top: 8rem">{{post.Title}}</h1>
+      <br />
+      <h5 class="minorHeadings">Category / {{post.Category.Title}}</h5>
+      <br />
+      <img
+        src="/media/{{post.Image}}"
+        class="img-fluid img-thumbnail mx-auto d-block"
+        style="box-shadow: rgb(158, 158, 158) 0px 5px 20px 1px"
+        alt="{{post.Title}}"
+      />
+      <br />
+      <br />
+      <br />
+      <hr />
+      <br />
+      <div class="row container-fluid">
+        <div class="col-md-8">
+          <div class="paraContent">
+            <p id="paraContent">{{post.Content | safe}}</p>
+          </div>
+        </div>
+        <div class="col-md-3 mx-auto">
+          <!-- we can add widgets here -->
+          <!-- tags and categories widget -->
+          <div class="card widgetContent" style="width: auto">
+            <div class="card-header" style="text-align: center;"><h3>Categories</h3></div>
+            <ul class="list-group list-group-flush">
+              {% for c in cats %}
+              <a href="/category/{{c.url}}" class="list-group-item">{{c.Title}}</a>
+              {%endfor%}
+            </ul>
+          </div>
+          <!-- creator widget -->
+          <div class="card my-5 widgetContent" style="width: auto">
+            <img
+              src="{%static 'images/adminPic.png' %}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <hr />
+              <h3 class="head" style="color: black; font-family: var(--font4); text-align: center;">
+                Creator and Writer
+              </h3>
+              <hr />
+              <p class="card-text">
+                The name is Satyam, I'm a programmer, a student, a blogger and
+                an entrepreneur who always tries to build himself and developing
+                his own empire.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}

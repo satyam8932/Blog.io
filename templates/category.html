@@ -1,0 +1,24 @@
+{%extends 'base.html'%} {%block title%}{{cats.Title}} - Category{%endblock%} {%block content%}
+
+
+<div class="containerPost">
+
+    <br>
+    <br>
+    <br>
+    <h1 class="contentHeadings my-5">{{cats.Title}}</h1>
+    <img src="/media/{{cats.Image}}" alt="{{cats.Title}}" class="img-fluid imgBlur" srcset="">
+    <br>
+    <hr>
+    <br>
+    <div class="container widgetContent">
+        <ul class="list-group list-group-flush">
+            {% for p in post %}
+            <a href="/blog/{{p.url}}" class="list-group-item">{{p.Title}}</a>
+            {%endfor%}
+        </ul>
+    </div>
+</div>
+
+
+{%endblock%}
