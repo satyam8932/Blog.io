@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=#776^dy))+tx83$5&&kp%=-5!bg17o(!%^xpabng#-9jrw77w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','blogio-production-9555.up.railway.app/']
 
 
 # Application definition
