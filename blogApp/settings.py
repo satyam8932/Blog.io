@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*','blogio-production-9555.up.railway.app/']
 
-
 # Application definition
 
 INSTALLED_APPS = [

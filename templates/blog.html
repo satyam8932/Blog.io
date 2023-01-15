@@ -12,7 +12,6 @@
     <br />
     <br />
 </div>
- 
 
 <div class="container">
     <div class="owl-carousel">
@@ -23,7 +22,8 @@
                 <div class="card-body">
                     <h5 class="card-title"><b>{{c.Title}}</b></h5>
                     <p class="card-text">{{c.Description | truncatewords:10 | safe}}</p>
-                    <a href="/category/{{c.url}}" class="btn btn-primary readBtn categoryStyling d-flex justify-content-center">View Category</a>
+                    <a href="/category/{{c.url}}"
+                        class="btn btn-primary readBtn categoryStyling d-flex justify-content-center">View Category</a>
                 </div>
             </div>
         </div>
@@ -50,9 +50,9 @@
     async></script>
 
 <div class="container">
-    <div class="row" data-masonry='{"percentPosition": true }'>
+    <div class="row" >
         {% for p in posts %}
-        <div class="col">
+        <div class="col-md-auto">
             <div class="card cardStyling">
                 <img src="/media/{{p.Image}}" class="card-img-top imgBlur" alt="{{p.Title}}" />
                 <div class="card-body">
