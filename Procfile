@@ -1,1 +1,1 @@
-web: gunicorn blogApp.wsgi --log-file
+web: gunicorn main:app --workers 2 --threads 4
